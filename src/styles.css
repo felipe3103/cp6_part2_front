@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globais */
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+/* Header */
+.header {
+  @apply bg-blue-600 text-white p-4 flex justify-between items-center;
+}
+
+.nav-item {
+  @apply hover:underline;
+}
+
+/* Footer */
+.footer {
+  @apply bg-blue-600 text-white p-4 text-center;
+}
+
+/* Banner */
+.banner {
+  @apply bg-yellow-300 p-6 text-center rounded-lg shadow-md;
+}
+
+.banner h2 {
+  @apply text-3xl font-bold mb-2;
+}
+
+.banner p {
+  @apply text-lg;
+}
+
+.banner .banner-price {
+  @apply text-xl font-semibold text-red-600 mt-2;
+}
+
+/* Carrossel */
+.carousel {
+  @apply relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-md;
+  height: 400px; /* Definindo uma altura fixa para manter a proporção */
+}
+
+.carousel img {
+  @apply w-full h-full object-cover;
+  max-height: 100%; /* Impede que a imagem ultrapasse a altura do contêiner */
+  max-width: 100%; /* Impede que a imagem ultrapasse a largura do contêiner */
+}
+
+/* Botões de Navegação do Carrossel */
+.carousel-button {
+  @apply absolute bg-black text-white px-4 py-2 rounded opacity-75 hover:opacity-100 transition-opacity;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-button-left {
+  left: 10px;
+}
+
+.carousel-button-right {
+  right: 10px;
+}
+
+/* Card */
+.card {
+  @apply border border-gray-300 rounded-lg shadow-md overflow-hidden;
+}
+
+/* Contêiner de Imagem do Card */
+.card-image-container {
+  width: 100%;
+  height: 0;
+  padding-top: 66.67%; /* Define uma proporção de 3:2 */
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem; /* Arredonda a borda superior esquerda */
+  border-top-right-radius: 0.5rem; /* Arredonda a borda superior direita */
+}
+
+/* Estilo da Imagem */
+.card img {
+  @apply w-full h-full object-cover absolute inset-0;
+}
+
+
+/* Formulário */
+.formulario {
+  @apply bg-gray-100 p-6 rounded-lg shadow-md max-w-md mx-auto mt-8;
+}
+
+.formulario h2 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.formulario-input,
+.formulario-textarea {
+  @apply border border-gray-300 p-2 rounded w-full mb-4;
+}
+
+.formulario-button {
+  @apply bg-blue-600 text-white p-2 rounded w-full;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+/* Estilos básicos do modal */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white p-6 rounded-lg shadow-lg w-full max-w-lg mx-4 relative;
+}
+
+.modal-close-button {
+  @apply absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl;
+}
